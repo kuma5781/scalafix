@@ -10,7 +10,7 @@ lazy val root = (project in file("."))
     name := "scalafix",
     libraryDependencies ++= Seq(
         munit % Test,
-        "ch.epfl.scala" %% "scalafix-core" % _root_.scalafix.sbt.BuildInfo.scalafixVersion
+        "ch.epfl.scala" %% "scalafix-core" % _root_.scalafix.sbt.BuildInfo.scalafixVersion % ScalafixConfig
     ),
     semanticdbEnabled := true,
     semanticdbVersion := scalafixSemanticdb.revision,
